@@ -29,14 +29,25 @@ class StreetFighter extends Component {
     render() {
         let characters = this.state.characters;
         characters = characters.map((char, index) => {
-            return <li>{char}</li>;
+            return <Character char={char} key={index} />;
         });
-
         return (
             <div>
                 <p>Street Fighter Characters</p>
-                <ul style={{ textAlign: 'left' }}>{characters}</ul>
+                <ul>{characters}</ul>
             </div>
+        );
+    }
+}
+
+class Character extends Component {
+    render() {
+        return (
+            <li>
+                <div className="character">
+                    <span className="characterName">{this.props.char}</span>
+                </div>
+            </li>
         );
     }
 }
