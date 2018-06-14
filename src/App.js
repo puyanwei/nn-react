@@ -1,36 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <ToDoComponent msg="ello ello ello" chracter={ streetFighter } />
+                <StreetFighter />
             </div>
         );
     }
 }
 
-class ToDoComponent extends Component {
+class StreetFighter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            characters: [
+                'Chun-Li',
+                'Guile',
+                'Ryu',
+                'Ken',
+                'E.Honda',
+                'Dhalsim',
+            ],
+        };
+    }
+
     render() {
         return (
             <div>
-                <h1>hello world</h1>
-                <h1>And what a world this is!</h1>
-                <p>{this.props.msg}</p>
-                <p>
-                    You have chosen {streetFighter.name} from { streetFighter.country } who's special move is { streetFighter.special }
-                </p>
+                <p>Street Fighter Characters</p>
+                <ul style={{ textAlign: 'left' }}>
+                    <li>{this.state.characters[0]}</li>
+                    <li>{this.state.characters[1]}</li>
+                    <li>{this.state.characters[2]}</li>
+                    <li>{this.state.characters[3]}</li>
+                    <li>{this.state.characters[4]}</li>
+                </ul>
             </div>
         );
     }
 }
-
-let streetFighter = {
-    name: 'Chun-Li',
-    country: 'China',
-    special: 'Spinning Bird Kick',
-};
 
 export default App;
