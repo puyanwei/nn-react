@@ -1,0 +1,23 @@
+.character {
+    padding: 16px 5px;
+    border-bottom: 1px dashed #bbb;
+    display: flex;
+}
+
+.character:hover {
+    background: #eee;
+}
+
+.character-name {
+    flex-basis: 0;
+    flex-grow: 9;
+}
+
+.character-delete {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: right;
+    color: #7f4cc1;
+    font-weight: bold;
+    cursor: pointer;
+}

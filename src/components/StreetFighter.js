@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Character from './Character'
+import '../css/street-fighter.css';
+
 
 class StreetFighter extends Component {
     constructor(props) {
@@ -23,7 +25,7 @@ class StreetFighter extends Component {
             );
         });
         return (
-            <div>
+            <div className="sf-wrapper">
                 <p>Street Fighter Characters</p>
                 <ul>{characters}</ul>
             </div>

@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
+import '../css/character.css';
 
 class Character extends Component {
     render() {
         return (
             <li>
                 <div className="character">
-                    <span className="character-name">{this.props.char}</span>
+                    <span className="character-name">{this.props.char}
+                    </span>
                     <span
                         className="character-delete"
                         onClick={this.handleDelete}
-                        > x </span>
+                        > x
+                    </span>
                 </div>
             </li>
-        )   
+        )
     };
 
     handleDelete = () => {
