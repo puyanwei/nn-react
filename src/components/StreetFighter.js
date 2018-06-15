@@ -29,7 +29,7 @@ class StreetFighter extends Component {
             </div>
         );
     }
-    onDelete(chosenCharacter) {
+    onDelete = (chosenCharacter) => {
         let updatedCharactersList = this.state.characters.filter(
             (char, index) => {
                 return chosenCharacter !== char;

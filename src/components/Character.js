@@ -12,10 +12,10 @@ class Character extends Component {
                         > x </span>
                 </div>
             </li>
-        )
+        )   
     };
 
-    handleDelete() {
+    handleDelete = () => {
         this.props.onDelete(this.props.char);
     }
 }
