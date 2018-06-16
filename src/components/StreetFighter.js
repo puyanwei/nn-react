@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Character from './Character';
 import AddCharacter from './AddCharacter';
@@ -28,6 +29,7 @@ class StreetFighter extends React.Component {
         });
         return (
             <div id="sf-wrapper">
+                <Link to={'/about'}>About</Link>
                 <p>Street Fighter Characters</p>
                 <ul>{characters}</ul>
                 <AddCharacter onAdd={this.onAdd} />
