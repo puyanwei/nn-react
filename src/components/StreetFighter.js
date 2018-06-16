@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Character from './Character'
+import AddCharacter from './AddCharacter';
+
 import '../css/street-fighter.css';
 
 
@@ -28,6 +30,7 @@ class StreetFighter extends Component {
             <div className="sf-wrapper">
                 <p>Street Fighter Characters</p>
                 <ul>{characters}</ul>
+                <AddCharacter></AddCharacter>
             </div>
         );
     }
