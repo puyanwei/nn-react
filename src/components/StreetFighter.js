@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { render } from 'react-dom';
+
 import Character from './Character';
 import AddCharacter from './AddCharacter';
 
 import '../css/street-fighter.css';
 
-class StreetFighter extends Component {
+class StreetFighter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

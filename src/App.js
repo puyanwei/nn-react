@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { render } from 'react-dom';
+
 import './App.css';
+// import Router from './routes/router';
 import StreetFighter from './components/StreetFighter';
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return (
             <div className="App">

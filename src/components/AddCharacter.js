@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { render } from 'react-dom';
+
 import '../css/add-character.css';
 
-class AddCharacter extends Component {
+class AddCharacter extends React.Component {
     render() {
         return (
             <form id="add-character" onSubmit={this.handleSubmit}>
