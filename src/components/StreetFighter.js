@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 
 import Character from './Character';
 import AddCharacter from './AddCharacter';
