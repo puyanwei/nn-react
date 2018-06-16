@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Character from './Character'
+import Character from './Character';
 import AddCharacter from './AddCharacter';
 
 import '../css/street-fighter.css';
-
 
 class StreetFighter extends Component {
     constructor(props) {
@@ -27,10 +26,10 @@ class StreetFighter extends Component {
             );
         });
         return (
-            <div className="sf-wrapper">
+            <div id="sf-wrapper">
                 <p>Street Fighter Characters</p>
                 <ul>{characters}</ul>
-                <AddCharacter></AddCharacter>
+                <AddCharacter onAdd={this.onAdd} />
             </div>
         );
     }
@@ -44,7 +43,14 @@ class StreetFighter extends Component {
         this.setState({
             characters: updatedCharactersList,
         });
-    }
+    };
+    onAdd = (newCharacter) => {
+        let updatedCharactersList = this.state.characters;
+        updatedCharactersList.push(newCharacter);
+        this.setState({
+            characters: updatedCharactersList,
+        });
+    };
 }
 
 export default StreetFighter;

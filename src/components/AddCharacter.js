@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/add-character.css';
 
 class AddCharacter extends Component {
     render() {
@@ -16,7 +17,8 @@ class AddCharacter extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.refs.newCharacter.value);
+        this.props.onAdd(this.refs.newCharacter.value);
+        this.refs.newCharacter.value = '';
     };
 }
 
